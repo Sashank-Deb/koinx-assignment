@@ -1,0 +1,42 @@
+.navbarContainer{
+    display: flex;
+    background: white;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    .leftSection{
+        width: 100%;
+        .logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .rightSection{
+        display: flex;
+        height: auto;
+        background: white;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 30px;
+        .navbarItems{
+            color: black;
+            font-size: 14px;
+            font-weight: 500;
+            gap: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            background: #1B4AEF;
+            background: linear-gradient(-90deg, rgba(40,112,234,1) 100%, rgba(27,74,239,1) 100%);
+            text-transform: none;
+            font-weight: 500;
+            box-shadow: none;
+            border-radius: 8px;
+            padding-top: 5px;
+        }
+    }
+}
