@@ -14,7 +14,7 @@ function TradingViewWidget() {
         {
           "autosize": true,
           "symbol": "BITSTAMP:BTCUSD",
-          "interval": "D",
+          "interval": "0.0024",
           "timezone": "Etc/UTC",
           "theme": "dark",
           "style": "3",
