@@ -1,11 +1,9 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react';
 
-function TradingViewWidget() {
+function TradingViewWidget({symbol="btc", interval= 30, }) {
   const container = useRef();
-
-  useEffect(
-    () => {
+  useEffect(() => {
       const script = document.createElement("script");
       script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
       script.type = "text/javascript";
@@ -13,8 +11,8 @@ function TradingViewWidget() {
       script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "BITSTAMP:BTCUSD",
-          "interval": "0.0024",
+          "symbol": "${symbol}",
+          "interval": "${interval}",
           "timezone": "Etc/UTC",
           "theme": "dark",
           "style": "3",
@@ -30,9 +28,11 @@ function TradingViewWidget() {
           "support_host": "https://www.tradingview.com"
         }`;
       container.current.appendChild(script);
-      return () => script.remove();
+      return () => {
+        script.remove();
+      };
     },
-    []
+    [interval, symbol]
   );
 
   return (
