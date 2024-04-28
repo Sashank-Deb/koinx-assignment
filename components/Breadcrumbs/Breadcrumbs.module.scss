@@ -1,0 +1,19 @@
+.container{
+    text-align: left;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+    padding: 1rem 4rem;
+    color: #334155b2;
+    a{
+        transition: 0.2s ease;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    .coin{
+        color: #1E293B;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+}

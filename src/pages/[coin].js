@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import OverviewBox from "../../components/OverviewBox/OverviewBox";
+import { useEffect } from "react";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +30,9 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({coinData}) {
+  useEffect(()=>{
+console.log(coinData)
+  },[])
   return (
     <>
       <Head>
@@ -43,6 +48,7 @@ export default function Home({coinData}) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Navbar/>
+        <Breadcrumbs coin={coinData.name}/>
         <OverviewBox coinData={coinData}/>
       </main>
     </>

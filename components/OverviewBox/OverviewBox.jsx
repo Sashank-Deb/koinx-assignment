@@ -16,10 +16,8 @@ const OverviewBox = ({coinData}) => {
           </p>
           <p>Rank #{coinData.rank}</p>
         </div>
-
       </div>
       <TradingViewWidget symbol={coinData.symbol} interval={30}/>
-      <TradingViewWidget symbol={"btc"} interval={30}/>
     </article>
   )
 }
